@@ -1,0 +1,4 @@
+= Anotação de exemplo
+:lang: pt-BR
+
+Esta página demonstra uma anotação independente. Uma coleção pode reunir registros temáticos, diários, pesquisas ou qualquer outro conteúdo que não exija uma leitura linear.

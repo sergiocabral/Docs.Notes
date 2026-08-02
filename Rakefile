@@ -15,6 +15,16 @@ COMMON_ATTRIBUTES = File.join('asciidoctor', 'support', 'attributes', 'common.ad
 SHARED_IMAGES = File.join('modules', 'ROOT', 'assets', 'images')
 EPUB_IMAGES_STAGE = File.join('asciidoctor', 'support', 'epub-images')
 
+def relative_images_directory(module_name)
+  File.join('..', '..', 'modules', module_name, 'assets', 'images').tr('\\', '/')
+end
+
+def copy_images(source, destination)
+  return unless Dir.exist? source
+
+  FileUtils.cp_r Dir.children(source).map { |name| File.join(source, name) }, destination
+end
+
 def attributes_from(path)
   File.readlines(path, chomp: true).filter_map do |line|
     match = line.match(/^:([^:]+):\s*(.*)$/)
@@ -49,12 +59,18 @@ task :build do
     FORMATS.each_value do |command, extension|
       epub_images_staged = false
       begin
-        format_attributes = attributes
+        format_attributes = attributes.reject { |name, _value| name == 'imagesdir' }.merge(
+          'content-imagesdir' => relative_images_directory(module_name)
+        )
         if extension == 'epub'
           FileUtils.mkdir EPUB_IMAGES_STAGE
           epub_images_staged = true
-          FileUtils.cp_r Dir.children(SHARED_IMAGES).map { |name| File.join(SHARED_IMAGES, name) }, EPUB_IMAGES_STAGE
-          format_attributes = attributes.merge('imagesdir' => File.basename(EPUB_IMAGES_STAGE))
+          copy_images SHARED_IMAGES, EPUB_IMAGES_STAGE
+          copy_images File.join('modules', module_name, 'assets', 'images'), EPUB_IMAGES_STAGE
+          format_attributes = attributes.merge(
+            'imagesdir' => File.basename(EPUB_IMAGES_STAGE),
+            'content-imagesdir' => File.basename(EPUB_IMAGES_STAGE)
+          )
         end
 
         arguments = [

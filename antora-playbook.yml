@@ -1,6 +1,6 @@
 site:
-  title: Publicação
-  start_page: publication::index.adoc
+  title: Notes
+  start_page: notes::index.adoc
 
 content:
   sources:

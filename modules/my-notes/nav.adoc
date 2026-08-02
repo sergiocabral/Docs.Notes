@@ -1,0 +1,2 @@
+* xref:index.adoc[my-notes]
+** xref:0010-anotacao-exemplo.adoc[Anotação de exemplo]

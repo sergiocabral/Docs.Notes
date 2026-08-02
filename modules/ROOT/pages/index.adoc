@@ -1,24 +1,25 @@
-= Modelo de publicação
+= Modelo de coleção de notas
 
 [cols="1h,3"]
 |===
 | Título
-| A definir
+| Notes
 
 | Responsável
 | A definir
 
 | Informações
 a|
-* A definir
-* A definir
-* A definir
+* Componente Antora reutilizável
+* Coleções independentes no mesmo repositório
+* Geração opcional de HTML, PDF e EPUB
 
-| Edições
+| Coleções
 a|
-* xref:main:0000-capa.adoc[Principal]
+* xref:my-notes:index.adoc[my-notes]
+* xref:other-notes:index.adoc[other-notes]
 |===
 
 == Sobre
 
-A definir.
+Este repositório é um exemplo didático para organizar anotações que não formam necessariamente um livro. Cada módulo possui seu próprio índice, navegação e ordem de exportação.

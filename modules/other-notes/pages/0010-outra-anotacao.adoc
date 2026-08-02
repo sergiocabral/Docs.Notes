@@ -1,0 +1,4 @@
+= Outra anotação
+:lang: pt-BR
+
+Esta é uma página didática da segunda coleção. O nome do módulo identifica a coleção; o idioma continua declarado separadamente nos metadados de publicação.

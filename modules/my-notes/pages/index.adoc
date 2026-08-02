@@ -1,0 +1,4 @@
+= my-notes
+:lang: pt-BR
+
+Este índice apresenta uma coleção de notas de exemplo. Substitua a descrição e os arquivos deste módulo pelo conteúdo real da primeira coleção.

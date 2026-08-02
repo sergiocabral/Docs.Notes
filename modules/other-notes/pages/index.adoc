@@ -1,0 +1,4 @@
+= other-notes
+:lang: pt-BR
+
+Este índice apresenta uma segunda coleção de exemplo. Os módulos podem ter estruturas e páginas diferentes, mesmo quando usam o mesmo idioma.

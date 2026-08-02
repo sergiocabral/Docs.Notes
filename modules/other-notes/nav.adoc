@@ -1,0 +1,2 @@
+* xref:index.adoc[other-notes]
+** xref:0010-outra-anotacao.adoc[Outra anotação]

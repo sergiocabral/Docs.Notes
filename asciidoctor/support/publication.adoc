@@ -21,4 +21,5 @@ ifdef::backend-html5[]
 image::{cover-banner-image}[{publication-title},width=100%,align=center]
 endif::[]
 
-include::../contents.adoc[]
+:imagesdir: {content-imagesdir}
+include::../contents/{edition-module}.adoc[]

@@ -1,0 +1,5 @@
+:sectnums!:
+include::../../modules/{edition-module}/pages/index.adoc[leveloffset=+1]
+
+:sectnums:
+include::../../modules/{edition-module}/pages/0010-outra-anotacao.adoc[leveloffset=+1]

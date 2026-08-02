@@ -1,8 +1,12 @@
-author: Quem sou eu?
+author: A definir
 isbn: ''
 
 editions:
-  main:
-    title: 'Publicação: Genérica'
-    slug: nome-do-arquivo-gerado
+  my-notes:
+    title: My Notes
+    slug: my-notes
+    lang: pt-BR
+  other-notes:
+    title: Other Notes
+    slug: other-notes
     lang: pt-BR

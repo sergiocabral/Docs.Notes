@@ -1,6 +1,7 @@
-name: publication
-title: Publicação
+name: notes
+title: Notes
 version: ~
 start_page: ROOT:index.adoc
 nav:
-  - modules/main/nav.adoc
+  - modules/my-notes/nav.adoc
+  - modules/other-notes/nav.adoc
